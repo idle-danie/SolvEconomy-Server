@@ -8,25 +8,18 @@
 > `solvEconomy - 나만의 경제 스터디 메이트`는 아직은 경제 용어가 익숙하지 않은 유저를 위해 경제 용어를 쉽게 익힐 수 있도록 퀴즈 형태의 문제로 제공한다.
 
 ### 👥 맴버구성
-<div style="display: flex;">
-    <table>
-        <tr>
-            <td align="center"><a href="https://github.com/DongJun1110"><img src="https://avatars.githubusercontent.com/DongJun1110" width="140px;" alt=""></a></td>
-        </tr>
-        <tr>
-            <td align="center"><a href="https://github.com/DongJun1110"><b>김동준</b></a></td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <td align="center"><a href="https://github.com/idle-danie"><img src="https://avatars.githubusercontent.com/idle-danie" width="140px;" alt=""></a></td>
-        </tr>
-        <tr>
-            <td align="center"><a href="https://github.com/idle-danie"><b>김형준</b></a></td>
-        </tr>
-    </table>
-</div>
+<table>
+ <tr>
+    <td align="center"><a href="https://github.com/DongJun1110"><img src="https://avatars.githubusercontent.com/DongJun1110" width="140px;" alt=""></a></td>
+    <td align="center"><a href="https://github.com/idle-danie"><img src="https://avatars.githubusercontent.com/idle-danie" width="140px;" alt=""></a></td>
+    <td align="center"><a href="https://github.com/"><img src="https://avatars.githubusercontent.com/" width="140px;" alt=""></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/DongJun1110"><b>김동준</b></a></td>
+    <td align="center"><a href="https://github.com/idle-danie"><b>김형준</b></a></td>
+    <td align="center"><a href="https://github.com/"><b>박기준</b></a></td>
+  </tr>
+</table>
 
 
 

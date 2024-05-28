@@ -25,9 +25,18 @@ public class Quiz extends BaseEntity {
     private String question;
 
     @Column(nullable = false)
-    private int answer;
+    private String answer;
 
     @Column(nullable = false)
-    private List<String> choices;
+    private String c1;
+
+    @Column(nullable = false)
+    private String c2;
+
+    @Column(nullable = false)
+    private String c3;
+
+    @Column(nullable = false)
+    private String c4;
 
 }

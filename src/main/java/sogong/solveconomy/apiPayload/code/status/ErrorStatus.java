@@ -29,7 +29,15 @@ public enum ErrorStatus implements BaseErrorCode {
     JWT_UNAUTHORIZED(UNAUTHORIZED, "JWT4002", "자격증명이 유효하지 않습니다."),
     JWT_EXPIRATION(UNAUTHORIZED, "JWT4003", "만료된 jwt 토큰입니다"),
     JWT_WRONG_SIGNATURE(UNAUTHORIZED, "JWT4004", "잘못된 jwt 서명입니다"),
-    JWT_WRONG_REFRESHTOKEN(UNAUTHORIZED, "JWT4005", "잘못된 refresh 토큰입니다.");
+    JWT_WRONG_REFRESHTOKEN(UNAUTHORIZED, "JWT4005", "잘못된 refresh 토큰입니다."),
+
+    //quiz
+    QUIZ_ALL_SOLVED(BAD_REQUEST, "QUIZ4001", "모든 문제를 풀었습니다"),
+    QUIZ_ALREADY_SOLVED(BAD_REQUEST, "QUIZ4002", "이미 푼 문제입니다"),
+    QUIZ_NOT_FOUND(BAD_REQUEST, "QUIZ4003", "퀴즈가 존재하지 않습니다"),
+
+    //dict
+    DICT_NOT_FOUND(BAD_REQUEST, "DICT4001", "사전이 존재하지 않습니다");
 
 
 

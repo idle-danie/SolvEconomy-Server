@@ -23,7 +23,7 @@ public class MemoController {
         return ApiResponse.onSuccess(dtos);
     }
 
-    @PostMapping("/write")
+    @PostMapping("")
     public ApiResponse<String> write(@RequestParam(name = "uid") String uid, @RequestBody MemoRequestDTO dto) {
         memoService.write(uid, dto);
         return ApiResponse.onSuccess("저장 완료");

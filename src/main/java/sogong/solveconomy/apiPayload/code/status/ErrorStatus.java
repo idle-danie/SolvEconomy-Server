@@ -37,7 +37,10 @@ public enum ErrorStatus implements BaseErrorCode {
     QUIZ_NOT_FOUND(BAD_REQUEST, "QUIZ4003", "퀴즈가 존재하지 않습니다"),
 
     //dict
-    DICT_NOT_FOUND(BAD_REQUEST, "DICT4001", "사전이 존재하지 않습니다");
+    DICT_NOT_FOUND(BAD_REQUEST, "DICT4001", "사전이 존재하지 않습니다"),
+
+    //memo
+    MEMO_NOT_FOUND(BAD_REQUEST, "MEMO4001", "메모가 존재하지 않습니다");
 
 
 

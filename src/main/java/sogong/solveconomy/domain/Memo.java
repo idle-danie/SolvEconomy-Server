@@ -28,4 +28,12 @@ public class Memo extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
 }

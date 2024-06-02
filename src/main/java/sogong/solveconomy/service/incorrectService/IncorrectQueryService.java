@@ -1,4 +1,4 @@
-package sogong.solveconomy.service.incorrect;
+package sogong.solveconomy.service.incorrectService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,6 @@ import sogong.solveconomy.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static sogong.solveconomy.apiPayload.code.status.ErrorStatus.*;
 

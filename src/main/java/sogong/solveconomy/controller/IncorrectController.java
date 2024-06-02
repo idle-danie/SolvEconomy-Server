@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import sogong.solveconomy.apiPayload.ApiResponse;
 import sogong.solveconomy.dto.incorrectDTO.IncorrectDetailResponseDTO;
 import sogong.solveconomy.dto.incorrectDTO.IncorrectResponseDTO;
-import sogong.solveconomy.service.incorrect.IncorrectQueryService;
+import sogong.solveconomy.service.incorrectService.IncorrectQueryService;
 
 @RestController
 @RequiredArgsConstructor

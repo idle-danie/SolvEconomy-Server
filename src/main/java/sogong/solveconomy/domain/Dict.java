@@ -21,7 +21,8 @@ public class Dict extends BaseEntity {
     @Column(nullable = false)
     private String keyword;
 
-    @Column(nullable = false)
+    @Lob
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String definition;
 
 }

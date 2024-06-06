@@ -3,10 +3,13 @@ package sogong.solveconomy.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import sogong.solveconomy.apiPayload.ApiResponse;
+import sogong.solveconomy.domain.Memo;
 import sogong.solveconomy.dto.memoDTO.MemoListResponseDTO;
 import sogong.solveconomy.dto.memoDTO.MemoRequestDTO;
 import sogong.solveconomy.service.memoService.MemoQueryService;
 import sogong.solveconomy.service.memoService.MemoService;
+
+import java.util.List;
 
 
 @RestController
@@ -18,9 +21,8 @@ public class MemoController {
     private final MemoQueryService memoQueryService;
 
     @GetMapping("")
-    public ApiResponse<MemoListResponseDTO> memo(@RequestParam(name = "uid") String uid) {
-        MemoListResponseDTO dtos = memoQueryService.getMemos(uid);
-        return ApiResponse.onSuccess(dtos);
+    public ApiResponse<List<Memo>> memo(@RequestParam(name = "uid") String uid) {
+        return ApiResponse.onSuccess(memoQueryService.getMemos(uid));
     }
 
     @PostMapping("")

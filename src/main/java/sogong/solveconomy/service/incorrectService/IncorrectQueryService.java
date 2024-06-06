@@ -31,7 +31,7 @@ public class IncorrectQueryService {
     private final QuizRepository quizRepository;
     private final DictRepository dictRepository;
 
-    public IncorrectResponseDTO incorrectList(String uid) {
+    public List<String> incorrectList(String uid) {
         User user = userRepository.findByUid(uid).orElseThrow(() -> new UserHandler(USER_NOT_FOUND));
         List<String> result = new ArrayList<>();
         List<Solve> solveList = user.getSolveList();
@@ -40,7 +40,7 @@ public class IncorrectQueryService {
                 result.add(solve.getQuiz().getAnswer());
             }
         }
-        return IncorrectResponseDTO.builder().incorrectList(result).build();
+        return result;
     }
 
     public IncorrectDetailResponseDTO detail(String uid, String keyword) {

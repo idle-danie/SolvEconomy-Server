@@ -13,14 +13,11 @@ spring:
         show_sql: true
         format_sql: true
         default_batch_fetch_size: 1000
-  jwt:
-    header: Authorization
-    secret: ${jwt.secret}
-    token-validity-in-seconds : 3600
 
-  naver:
-    client-id: ${naver.client-id}
-    client-secret: ${naver.client-secret}
+
+naver:
+  client-id: ${naver.client-id}
+  client-secret: ${naver.client-secret}
 
 server:
   port: 8080

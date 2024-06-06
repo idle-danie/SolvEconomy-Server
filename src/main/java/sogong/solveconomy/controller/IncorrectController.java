@@ -10,6 +10,8 @@ import sogong.solveconomy.dto.incorrectDTO.IncorrectDetailResponseDTO;
 import sogong.solveconomy.dto.incorrectDTO.IncorrectResponseDTO;
 import sogong.solveconomy.service.incorrectService.IncorrectQueryService;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/incorrect")
@@ -18,9 +20,8 @@ public class IncorrectController {
     private final IncorrectQueryService incorrectQueryService;
 
     @GetMapping("")
-    public ApiResponse<IncorrectResponseDTO> incorrectList(@RequestParam(name = "uid") String uid) {
-        IncorrectResponseDTO dto = incorrectQueryService.incorrectList(uid);
-        return ApiResponse.onSuccess(dto);
+    public ApiResponse<List<String>> incorrectList(@RequestParam(name = "uid") String uid) {
+        return ApiResponse.onSuccess(incorrectQueryService.incorrectList(uid));
     }
 
     @GetMapping("/detail")

@@ -24,18 +24,9 @@ public class MemoQueryService {
 
     private final UserRepository userRepository;
 
-    public MemoListResponseDTO getMemos(String uid) {
+    public List<Memo> getMemos(String uid) {
         User user = userRepository.findByUid(uid).orElseThrow(() -> new UserHandler(USER_NOT_FOUND));
-        List<Memo> memoList = user.getMemoList();
-        List<MemoResponseDTO> result = new ArrayList<>();
-
-        if (memoList.isEmpty()) {
-            return null;
-        }
-        for (Memo memo : memoList) {
-            result.add(MemoConverter.toMemoDTO(memo));
-        }
-        return MemoListResponseDTO.builder().dtos(result).build();
+        return user.getMemoList();
     }
 
 

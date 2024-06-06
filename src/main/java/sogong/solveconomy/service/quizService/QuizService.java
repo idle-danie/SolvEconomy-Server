@@ -59,9 +59,14 @@ public class QuizService {
     }
 
 
-    public void alreadySolved(User user, Long quizId) {
+    public Integer alreadySolved(User user, Long quizId) {
+        if (user.getSolvedQuiz()==null) {
+            return null;
+        }
         if (user.getSolvedQuiz().contains(quizId)) {
             throw new QuizHandler(QUIZ_ALREADY_SOLVED);
+        }else{
+            return null;
         }
     }
 

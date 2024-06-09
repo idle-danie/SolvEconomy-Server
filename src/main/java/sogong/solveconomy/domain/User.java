@@ -31,6 +31,7 @@ public class User extends BaseEntity{
     @OneToMany(mappedBy = "user")
     private List<Memo> memoList;
 
+    @ElementCollection
     private List<Long> solvedQuiz = new ArrayList<>();
 
     @OneToMany(mappedBy = "user")

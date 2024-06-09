@@ -15,6 +15,7 @@ import sogong.solveconomy.repository.QuizRepository;
 import sogong.solveconomy.repository.UserRepository;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static sogong.solveconomy.apiPayload.code.status.ErrorStatus.*;
@@ -32,24 +33,27 @@ public class QuizQueryService {
         User user = userRepository.findByUid(uid).orElseThrow(() -> new UserHandler(USER_NOT_FOUND));
         List<Quiz> quizList = quizRepository.findAll();
         List<Long> solvedQuiz = user.getSolvedQuiz();
+
+        List<Quiz> unsolvedQuizzes = new ArrayList<>();
         for (Quiz quiz : quizList) {
-            if (solvedQuiz == null) {
-                return QuizConverter.toQuizResponseDTO(quiz);
-            }
-            if (!solvedQuiz.contains(quiz.getId())) {
-                return QuizConverter.toQuizResponseDTO(quiz);
+            if (solvedQuiz == null || !solvedQuiz.contains(quiz.getId())) {
+                unsolvedQuizzes.add(quiz);
             }
         }
-        throw new QuizHandler(QUIZ_ALL_SOLVED);
+
+        if (unsolvedQuizzes.isEmpty()) {
+            throw new QuizHandler(QUIZ_ALL_SOLVED);
+        }
+
+        Collections.shuffle(unsolvedQuizzes); // Shuffle the list to randomize
+        return QuizConverter.toQuizResponseDTO(unsolvedQuizzes.get(0));
     }
 
     public QuizHomeResponseDTO home(String uid) {
         User user = userRepository.findByUid(uid).orElseThrow(() -> new UserHandler(USER_NOT_FOUND));
         if (user.getSolvedQuiz() == null) {
+            log.info("현재 유저가 푼 문제는 없습니다");
             return QuizConverter.toQuizHomeResponseDTO(user.getName(), 0);
-        }
-        for (Long l : user.getSolvedQuiz()) {
-            log.info("현재 유저가 푼 문제 " + l);
         }
         return QuizConverter.toQuizHomeResponseDTO(user.getName(), user.getSolvedQuiz().size());
     }

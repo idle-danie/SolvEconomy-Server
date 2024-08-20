@@ -12,12 +12,10 @@
  <tr>
     <td align="center"><a href="https://github.com/DongJun1110"><img src="https://avatars.githubusercontent.com/DongJun1110" width="140px;" alt=""></a></td>
     <td align="center"><a href="https://github.com/idle-danie"><img src="https://avatars.githubusercontent.com/idle-danie" width="140px;" alt=""></a></td>
-    <td align="center"><a href="https://github.com/"><img src="https://avatars.githubusercontent.com/" width="140px;" alt=""></a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/DongJun1110"><b>김동준</b></a></td>
     <td align="center"><a href="https://github.com/idle-danie"><b>김형준</b></a></td>
-    <td align="center"><a href="https://github.com/"><b>박기준</b></a></td>
   </tr>
 </table>
 
